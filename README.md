@@ -4,7 +4,7 @@ JavaMYCIN is a program written to perform expert system consultations by parsing
 
 To compile go to the project's root folder and run `javac -d bin .\src\my\project\javamycin\*.java` in your terminal
 
-To run a consultation run `java -cp bin my.project.javamycin.JavaMYCIN .\src\my\project\javamycin\resources\complete_context\\[Complete Context].txt .\src\my\project\javamycin\resources\input\\[Input].txt` using the Complete Context and Input of your choice respectively.
+To run a consultation run `java -cp bin my.project.javamycin.JavaMYCIN .\src\my\project\javamycin\resources\complete_context\Complete_Context.txt .\src\my\project\javamycin\resources\input\Input.txt` using the Complete Context and Input of your choice respectively.
 
 # JavaMYCIN Overview
 
