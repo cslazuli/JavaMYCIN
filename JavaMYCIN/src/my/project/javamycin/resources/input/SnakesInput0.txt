@@ -1,0 +1,5 @@
+Color red-yellow-black
+Size medium
+Thickness medium
+Pattern bands
+Red-and-Yellow yes

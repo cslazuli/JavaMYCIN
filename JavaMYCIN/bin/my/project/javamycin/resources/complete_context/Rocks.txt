@@ -1,0 +1,72 @@
+/DEFCONTEXT
+
+Rocks
+
+Color NonGoal
+What is the color of the rock?
+brown black white
+
+Hardness NonGoal 
+What is the hardness of the rock?
+5-to-7 less-than-5
+
+Environment NonGoal
+What is the type of geologic environment?
+igneous metamorphic sedimentary
+
+Identity Goal
+What is the identity of the rock?
+coal obsidian limestone
+
+Pretty NonGoal
+Is it what an average person would consider pretty?
+yes no
+
+/DEFRULES
+
+/Rule
+Color black
+Pretty no
+Hardness less-than-5
+Conclude Identity coal 400
+
+/Rule
+Color black
+Pretty no
+Environment sedimentary
+Conclude Identity coal 400
+
+/Rule
+Color black
+Pretty unk
+Hardness less-than-5
+Conclude Identity coal 400
+
+/Rule
+Color black
+Pretty unk
+Environment sedimentary
+Conclude Identity coal 400
+
+/Rule
+Color black
+Hardness 5-to-7
+Environment igneous
+Conclude Identity obsidian 700
+
+/Rule
+Color black
+Hardness 5-to-7
+Environment metamorphic
+Conclude Identity obsidian 700
+
+/Rule
+Color black
+Hardness 5-to-7
+Environment unk
+Conclude Identity obsidian 700
+
+/Rule
+Color white
+Environment sedimentary
+Conclude Identity limestone 800

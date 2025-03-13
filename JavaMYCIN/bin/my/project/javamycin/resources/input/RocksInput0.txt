@@ -1,0 +1,3 @@
+Color black
+Hardness 5-to-7
+Environment igneous

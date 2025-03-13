@@ -1,0 +1,1162 @@
+/DEFCONTEXT
+
+Snakes
+
+Color Goal
+List the color of the snake.
+tan brown black grey green pink red yellow orange tan-and-white tan-and-brown yellow-and-brown red-yellow-black
+
+Size Goal 
+Give the approximate size of the snake. tiny = 11 inches or less, small = 12-18 inches, medium = 19-30 inches, large = over 30 inches.
+tiny small medium large
+
+Thickness NonGoal 
+Compared to other snakes, is this snake: quite thin, medium, or heavy-bodied?
+thin medium heavy
+
+Pattern Goal
+What pattern(s) are seen on the snake? stripes  = one or more stripes running lengthwise; bands = multiple bands around the body; blotches = large contrasting blotches on the back; spots = small, roughly circular spots; speckles = non-circular contrasting spots; solid = solid color without pattern; stripes-and-speckles = has both stripes and speckles"
+bands stripes blotches diamonds spots speckles solid
+
+Features NonGoal
+Enter features observed about the snake
+ring-around-neck upturned-nose black-head black-tail
+
+Rattles Goal
+Does the snake have rattles on its tail?
+yes no
+
+Triangular-Head NonGoal
+Does the snake have a triangular head, noticeably larger than its neck?
+yes no
+
+Red-and-Yellow NonGoal
+Are any red and yellow bands that are adjacent (touching)?
+yes no
+
+Cottonmouth NonGoal
+Does the snake display an open mouth that is white in color?
+yes no
+
+Swims-Head-Out NonGoal
+Does the snake swim with its head held above the water?
+yes no
+
+Bitten NonGoal
+Has someone been bitten by this snake?
+yes no
+
+Fang-Marks NonGoal
+If someone has been bitten by this snake, are two noticeably larger fang marks visible?
+yes no n/a
+
+Identity Goal
+What is the identity of the snake?
+plains-blind-snake prairie-ringneck western-diamondback plains-blackhead texas-coral-snake mexican-milk-snake flathead-snake ground-snake western-smooth-earth-snake rough-earth-snake bullsnake texas-indigo-snake water-moccasin copperhead rattlesnake
+
+Environment NonGoal
+What is the environment where the snake was seen?
+near-water in-water under-leaves grass woods
+
+Behavior NonGoal
+Enter any unusual behaviors observed
+aggressive playing-dead n/a
+
+Poisonous Goal
+Is the snake poisonous?
+yes no
+
+Latin-Name Goal
+What is this snake's latin name?
+Leptotyphlops-dulcis-dulcis Diadophis-punctatus-arnyi Tantilla-gracilis Tantilla-nigriceps-fumiceps Storeria-dekayi-texana Tropidoclonion-lineatum-texanum Sonora-semiannulata Virginia-valeriae-elegans Virginia-striatula Pituophis-melanoleucus-sayi Drymarchon-corais-erebennus Nerodia-erythrogaster-transversa Lampropeltis-triangulum-annulata Micrurus-fulvius-tenere Agkistrodon-piscivorus-leucostoma Agkistrodon-contortrix-laticinctus Crotalus-atrox Crotalus Sistrurus
+
+/DEFRULES
+
+/Rule
+Color pink
+Size tiny
+Environment under-leaves
+Conclude Identity plains-blind-snake 400
+
+/Rule
+Identity plains-blind-snake
+Conclude Latin-Name Leptotyphlops-dulcis-dulcis 1000
+
+/Rule
+Color grey
+Size small
+Features ring-around-neck
+Conclude Identity prairie-ringneck 800
+
+/Rule
+Color brown
+Size small
+Features ring-around-neck
+Conclude Identity prairie-ringneck 800
+
+/Rule
+Identity prairie-ringneck
+Conclude Latin-Name Diadophis-punctatus-arnyi 1000
+
+/Rule
+Color tan
+Size tiny
+Environment under-leaves
+Conclude Identity flathead-snake 400
+
+/Rule
+Identity flathead-snake
+Conclude Latin-Name Tantilla-gracilis 1000
+
+/Rule
+Color tan
+Size small
+Features black-head
+Conclude Identity plains-blackhead-snake 800
+
+/Rule
+Identity plains-blackhead-snake
+Conclude Latin-Name Tantilla-nigriceps-fumiceps 1000
+
+/Rule
+Color brown
+Size tiny
+Pattern stripes-and-speckles
+Conclude Identity texas-brown-snake 800
+
+/Rule
+Color brown
+Size small
+Pattern stripes-and-speckles
+Conclude Identity texas-brown-snake 800
+
+/Rule
+Identity texas-brown-snake
+Conclude Latin-Name Storeria-dekayi-texana 1000
+
+/Rule
+Color tan
+Size tiny
+Pattern stripes-and-speckles
+Conclude Identity texas-lined-snake 500
+
+/Rule
+Identity texas-lined-snake
+Conclude Latin-Name Tropidoclonion-lineatum-texanum 1000
+
+/Rule
+Color tan-and-white
+Size tiny
+Pattern bands
+Conclude Identity ground-snake 600
+
+/Rule
+Color tan-and-white
+Size small
+Pattern bands
+Conclude Identity ground-snake 600
+
+/Rule
+Identity grond-snake
+Conclude Latin-Name Sonora-semiannulata 1000
+
+/Rule
+Color pink
+Size tiny
+Environment grass
+Conclude Identity western-smooth-earth-snake 400
+
+/Rule
+Identity western-smooth-earth-snake
+Conclude Latin-Name Virginia-valeriae-elegans 1000
+
+/Rule
+Color brown
+Size tiny
+Conclude Identity rough-earth-snake 300
+
+/Rule
+Identity rough-earth-snake
+Conclude Latin-Name Virginia-striatula 1000
+
+/Rule
+Color tan-and-brown
+Pattern blotches
+Size large
+Triangular-Head no
+Rattles no
+Conclude Identity bullsnake 600
+
+/Rule
+Color tan-and-brown
+Pattern blotches
+Size large
+Triangular-Head unk
+Rattles no
+Conclude Identity bullsnake 600
+
+/Rule
+Color tan-and-brown
+Pattern blotches
+Size large
+Triangular-Head no
+Rattles unk
+Conclude Identity bullsnake 600
+
+/Rule
+Color tan-and-brown
+Pattern blotches
+Size large
+Triangular-Head unk
+Rattles unk
+Conclude Identity bullsnake 600
+
+/Rule
+Color yellow-and-brown
+Pattern blotches
+Size large
+Triangular-Head no
+Rattles no
+Conclude Identity bullsnake 600
+
+/Rule
+Color yellow-and-brown
+Pattern blotches
+Size large
+Triangular-Head unk
+Rattles no
+Conclude Identity bullsnake 600
+
+/Rule
+Color yellow-and-brown
+Pattern blotches
+Size large
+Triangular-Head no
+Rattles unk
+Conclude Identity bullsnake 600
+
+/Rule
+Color yellow-and-brown
+Pattern blotches
+Size large
+Triangular-Head unk
+Rattles unk
+Conclude Identity bullsnake 600
+
+/Rule
+Color tan-and-brown
+Pattern diamonds
+Size large
+Triangular-Head no
+Rattles no
+Conclude Identity bullsnake 600
+
+/Rule
+Color tan-and-brown
+Pattern diamonds
+Size large
+Triangular-Head unk
+Rattles no
+Conclude Identity bullsnake 600
+
+/Rule
+Color tan-and-brown
+Pattern diamonds
+Size large
+Triangular-Head no
+Rattles unk
+Conclude Identity bullsnake 600
+
+/Rule
+Color tan-and-brown
+Pattern diamonds
+Size large
+Triangular-Head unk
+Rattles unk
+Conclude Identity bullsnake 600
+
+/Rule
+Color yellow-and-brown
+Pattern diamonds
+Size large
+Triangular-Head no
+Rattles no
+Conclude Identity bullsnake 600
+
+/Rule
+Color yellow-and-brown
+Pattern diamonds
+Size large
+Triangular-Head unk
+Rattles no
+Conclude Identity bullsnake 600
+
+/Rule
+Color yellow-and-brown
+Pattern diamonds
+Size large
+Triangular-Head no
+Rattles unk
+Conclude Identity bullsnake 600
+
+/Rule
+Color yellow-and-brown
+Pattern diamonds
+Size large
+Triangular-Head unk
+Rattles unk
+Conclude Identity bullsnake 600
+
+/Rule
+Identity bullsnake
+Conclude Latin-Name Pituophis-melanoleucus-sayi 1000
+
+/Rule
+Color black
+Size large
+Conclude Identity texas-indigo-snake 600
+
+/Rule
+Identity texas-indigo-snake
+Conclude Latin-Name Drymarchon-corais-erebennus 1000
+
+/Rule
+Color brown
+Size medium
+Environment in-water
+Thickness thin
+Cottonmouth no
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment in-water
+Thickness unk
+Cottonmouth no
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment in-water
+Thickness thin
+Cottonmouth unk
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment in-water
+Thickness unk
+Cottonmouth unk
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment in-water
+Thickness thin
+Cottonmouth no
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment in-water
+Thickness unk
+Cottonmouth no
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment in-water
+Thickness unk
+Cottonmouth unk
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment near-water
+Thickness thin
+Cottonmouth no
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment near-water
+Thickness unk
+Cottonmouth no
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment near-water
+Thickness thin
+Cottonmouth unk
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment near-water
+Thickness unk
+Cottonmouth unk
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment near-water
+Thickness thin
+Cottonmouth no
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment near-water
+Thickness unk
+Cottonmouth no
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment near-water
+Thickness unk
+Cottonmouth unk
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment in-water
+Thickness medium
+Cottonmouth no
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment in-water
+Thickness unk
+Cottonmouth no
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment in-water
+Thickness medium
+Cottonmouth unk
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment in-water
+Thickness unk
+Cottonmouth unk
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment in-water
+Thickness medium
+Cottonmouth no
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment in-water
+Thickness unk
+Cottonmouth no
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment in-water
+Thickness unk
+Cottonmouth unk
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment near-water
+Thickness medium
+Cottonmouth no
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment near-water
+Thickness unk
+Cottonmouth no
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment near-water
+Thickness medium
+Cottonmouth unk
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment near-water
+Thickness unk
+Cottonmouth unk
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment near-water
+Thickness medium
+Cottonmouth no
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment near-water
+Thickness unk
+Cottonmouth no
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size medium
+Environment near-water
+Thickness unk
+Cottonmouth unk
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment in-water
+Thickness thin
+Cottonmouth no
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment in-water
+Thickness unk
+Cottonmouth no
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment in-water
+Thickness thin
+Cottonmouth unk
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment in-water
+Thickness unk
+Cottonmouth unk
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment in-water
+Thickness thin
+Cottonmouth no
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment in-water
+Thickness unk
+Cottonmouth no
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment in-water
+Thickness unk
+Cottonmouth unk
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment near-water
+Thickness thin
+Cottonmouth no
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment near-water
+Thickness unk
+Cottonmouth no
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment near-water
+Thickness thin
+Cottonmouth unk
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment near-water
+Thickness unk
+Cottonmouth unk
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment near-water
+Thickness thin
+Cottonmouth no
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment near-water
+Thickness unk
+Cottonmouth no
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment near-water
+Thickness unk
+Cottonmouth unk
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment in-water
+Thickness medium
+Cottonmouth no
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment in-water
+Thickness unk
+Cottonmouth no
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment in-water
+Thickness medium
+Cottonmouth unk
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment in-water
+Thickness unk
+Cottonmouth unk
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment in-water
+Thickness medium
+Cottonmouth no
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment in-water
+Thickness unk
+Cottonmouth no
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment in-water
+Thickness unk
+Cottonmouth unk
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment near-water
+Thickness medium
+Cottonmouth no
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment near-water
+Thickness medium
+Cottonmouth no
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment near-water
+Thickness unk
+Cottonmouth no
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment near-water
+Thickness medium
+Cottonmouth unk
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment near-water
+Thickness unk
+Cottonmouth unk
+Swims-Head-Out no
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment near-water
+Thickness medium
+Cottonmouth no
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment near-water
+Thickness unk
+Cottonmouth no
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Color brown
+Size small
+Environment near-water
+Thickness unk
+Cottonmouth unk
+Swims-Head-Out unk
+Conclude Identity blotched-water-snake 400
+
+/Rule
+Identity blotched-water-snake
+Conclude Latin-Name Nerodia-erythrogaster-transversa 1000
+
+/Rule
+Color red-yellow-black
+Red-and-Yellow no
+Conclude Identity mexican-milk-snake 800
+
+/Rule
+Color red-yellow-black
+Red-and-Yellow unk
+Conclude Identity mexican-milk-snake 800
+
+/Rule
+Identity mexican-milk-snake
+Conclude Latin-Name Lampropeltis-triangulum-annulata 1000
+
+/Rule
+Color red-yellow-black
+Red-and-Yellow yes
+Conclude Identity texas-coral-snake 1000
+
+/Rule
+Identity texas-coral-snake
+Conclude Latin-Name Micrurus-fulvius-tenere 1000
+
+/Rule
+Color brown
+Size medium
+Environment in-water
+Thickness heavy
+Conclude Identity water-moccasin 600
+
+/Rule
+Color brown
+Size medium
+Environment near-water
+Thickness heavy
+Conclude Identity water-moccasin 600
+
+/Rule
+Color brown
+Size large
+Environment in-water
+Thickness heavy
+Conclude Identity water-moccasin 600
+
+/Rule
+Color brown
+Size large
+Environment near-water
+Thickness heavy
+Conclude Identity water-moccasin 600
+
+/Rule
+Color brown
+Size medium
+Environment in-water
+Cottonmouth yes
+Conclude Identity water-moccasin 600
+
+/Rule
+Color brown
+Size medium
+Environment near-water
+Cottonmouth yes
+Conclude Identity water-moccasin 600
+
+/Rule
+Color brown
+Size large
+Environment in-water
+Cottonmouth yes
+Conclude Identity water-moccasin 600
+
+/Rule
+Color brown
+Size large
+Environment near-water
+Cottonmouth yes
+Conclude Identity water-moccasin 600
+
+/Rule
+Color brown
+Size medium
+Environment in-water
+Swims-Head-Out yes
+Conclude Identity water-moccasin 600
+
+/Rule
+Color brown
+Size medium
+Environment near-water
+Swims-Head-Out yes
+Conclude Identity water-moccasin 600
+
+/Rule
+Color brown
+Size large
+Environment in-water
+Swims-Head-Out yes
+Conclude Identity water-moccasin 600
+
+/Rule
+Color brown
+Size large
+Environment near-water
+Swims-Head-Out yes
+Conclude Identity water-moccasin 600
+
+/Rule
+Identity water-moccasin
+Conclude Latin-Name Agkistrodon-piscivorus-leucostoma 1000
+
+/Rule
+Color tan-and-brown
+Pattern bands
+Size small
+Environment woods
+Triangular-Head yes
+Conclude Identity copperhead 800
+
+/Rule
+Color tan-and-brown
+Pattern bands
+Size medium
+Environment woods
+Triangular-Head yes
+Conclude Identity copperhead 800
+
+/Rule
+Color tan-and-brown
+Pattern blotches
+Size small
+Environment woods
+Triangular-Head yes
+Conclude Identity copperhead 800
+
+/Rule
+Color tan-and-brown
+Pattern blotches
+Size medium
+Environment woods
+Triangular-Head yes
+Conclude Identity copperhead 800
+
+/Rule
+Identity copperhead
+Conclude Latin-Name Agkistrodon-contortrix-laticinctus 1000
+
+/Rule
+Size medium
+Color brown
+Pattern diamonds
+Rattles yes
+Conclude Identity western-diamondback 800
+
+/Rule
+Size medium
+Color brown
+Pattern blotches
+Rattles yes
+Conclude Identity western-diamondback 800
+
+/Rule
+Size large
+Color brown
+Pattern diamonds
+Rattles yes
+Conclude Identity western-diamondback 800
+
+/Rule
+Size large
+Color brown
+Pattern blotches
+Rattles yes
+Conclude Identity western-diamondback 800
+
+/Rule
+Size medium
+Color brown
+Pattern diamonds
+Triangular-Head yes
+Conclude Identity western-diamondback 800
+
+/Rule
+Size medium
+Color brown
+Pattern blotches
+Triangular-Head yes
+Conclude Identity western-diamondback 800
+
+/Rule
+Size large
+Color brown
+Pattern diamonds
+Triangular-Head yes
+Conclude Identity western-diamondback 800
+
+/Rule
+Size large
+Color brown
+Pattern blotches
+Triangular-Head yes
+Conclude Identity western-diamondback 800
+
+/Rule
+Identity western-diamondback
+Conclude Latin-Name Crotalus-atrox 1000
+
+/Rule
+Identity western-diamondback
+Conclude Poisonous yes 1000
+
+/Rule
+Identity rattlesnake
+Conclude Poisonous yes 1000
+
+/Rule
+Identity texas-coral-snake
+Conclude Poisonous yes 1000
+
+/Rule
+Identity water-moccasin
+Conclude Poisonous yes 1000
+
+/Rule
+Identity copperhead
+Conclude Poisonous yes 1000
+
+/Rule
+Pattern stripes
+Conclude Poisonous yes -600
+
+/Rule
+Pattern spots
+Conclude Poisonous yes -600
+
+/Rule
+Identity plains-blind-snake
+Conclude Poisonous yes -300
+
+/Rule
+Identity prairie-ringneck
+Conclude Poisonous yes -300
+
+/Rule
+Identity plains-blackhead
+Conclude Poisonous yes -300 
+
+/Rule
+Identity mexican-milk-snake
+Conclude Poisonous yes -300
+
+/Rule
+Identity flathead-snake
+Conclude Poisonous yes -300
+
+/Rule
+Identity ground-snake
+Conclude Poisonous yes -300
+
+/Rule
+Identity western-smooth-earth-snake
+Conclude Poisonous yes -300
+
+/Rule
+Identity rough-earth-snake
+Conclude Poisonous yes -300
+
+/Rule
+Identity bullsnake
+Conclude Poisonous yes -300
+
+/Rule
+Identity texas-indigo-snake
+Conclude Poisonous yes -300
+
+/Rule
+Identity unk
+Conclude Poisonous yes -300
+
+/Rule
+Rattles yes
+Size medium
+Conclude Identity rattlesnake 800
+
+/Rule
+Rattles yes
+Size tiny
+Conclude Identity rattlesnake 800
+
+/Rule
+Rattles yes
+Size small
+Conclude Identity rattlesnake 800
+
+/Rule
+Rattles yes
+Size unk
+Conclude Identity rattlesnake 800
+
+/Rule
+Identity rattlesnake
+Triangular-Head yes
+Conclude Latin-Name Crotalus 1000
+
+/Rule
+Identity rattlesnake
+Triangular-Head no
+Conclude Latin-Name Sistrurus 1000
+
+/Rule
+Bitten yes
+Fang-Marks yes
+Conclude Poisonous yes 201
+
+/Rule
+Bitten yes
+Fang-Marks no
+Conclude Poisonous yes -300
+
+/Rule
+Bitten yes
+Fang-Marks unk
+Conclude Poisonous yes -300

@@ -1,0 +1,4 @@
+Color black
+Hardness less-than-5
+Pretty no
+Environment sedimentary
