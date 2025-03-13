@@ -43,7 +43,7 @@ Formatting of CompleteContext.txt
     Conclude [Parameter] [Value of this parameter to conclude] [Conclusion Strength Value]
 
     /Rule
-    [Define the more rules using the same format as above]"
+    [Define the more rules using the same format as above]
 
 Formatting of Individual.txt
 
