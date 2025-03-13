@@ -48,9 +48,9 @@ Formatting of `Individual.txt`
     [Parameter] [Parameter value]
     [Continue list of given Parameter-Parameter Value pairs as needed by using the same format as above.]
 
-Place your Complete Context Files inside of the .\src\my\project\javamycin\resources\complete_context folder.
+Place your Complete Context Files inside of the `.\src\my\project\javamycin\resources\complete_context` folder.
 
-Place your Input Files inside of the .\src\my\project\javamycin\resources\input folder.
+Place your Input Files inside of the `.\src\my\project\javamycin\resources\input` folder.
 
 # Writing Input Files (Advanced Tips)
 
