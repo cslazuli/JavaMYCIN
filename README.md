@@ -1,6 +1,6 @@
 # Getting Started
 
-JavaMYCIN is a program written to perform expert system consultations by parsing user-generated text files. It is modeled after [TMYCIN (“Tiny EMYCIN”) by Gordon S. Novak Jr.](https://www.cs.utexas.edu/~novak/tmycin/tmycin.html) of UTexas Austin which itself is modeled after EMYCIN. The provided contexts and rulesets in Snakes.txt and Rocks.txt are modeled after those provided in TMYCIN. JavaMYCIN and its accepted inputs have a distinct internal implementation from both of its predecessors, being written in Java.
+JavaMYCIN is a program written to perform expert system consultations by parsing user-generated text files. It is modeled after [TMYCIN (“Tiny EMYCIN”) by Gordon S. Novak Jr.](https://www.cs.utexas.edu/~novak/tmycin/tmycin.html) of UTexas Austin which itself is modeled after EMYCIN. The provided contexts and rulesets in Snakes.txt and Rocks.txt are modeled after those provided in TMYCIN. JavaMYCIN has a distinct internal implementation from both of its predecessors, being written in Java.
 
 To compile go to the project's root folder and run `javac -d bin .\src\my\project\javamycin\*.java` in your terminal
 
