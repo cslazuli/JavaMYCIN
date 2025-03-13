@@ -12,13 +12,13 @@ JavaMYCIN requires two input text files:
 
 The Complete Context file which includes the Context followed by a set of Rules. 
 
-    Context: A list of Parameters that describe an individual and the different possible values for them.
+    * Context: A list of Parameters that describe an individual and the different possible values for them.
 
-    Rule: A statement that if an Individual is known to have some combination of parameter values (or unknown parameters), then we should conclude that it's likely or less likely to also have some other parameter value. Rule statements can be thought of as one or more predicates AND-ed together 
+    * Rule: A statement that if an Individual is known to have some combination of parameter values (or unknown parameters), then we should conclude that it's likely or less likely to also have some other parameter value. Rule statements can be thought of as one or more predicates AND-ed together 
         
         e.g. "IF Parameter 1 has value A AND Parameter 2 has an unknown value and ... THEN conclude strongly that Parameter F has value E"
 
-    Ruleset: A list of rules which altogether allow the expert system to make inferences about an Individual's unknown parameter values based on it's known ones.
+    * Ruleset: A list of rules which altogether allow the expert system to make inferences about an Individual's unknown parameter values based on it's known ones.
     
 An Individual file which represents an Individual within the Context known to have the user-provided parameter values.
 
