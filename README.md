@@ -1,6 +1,6 @@
 # Getting Started
 
-JavaMYCIN is a shell program written to perform expert system consultations by parsing user-generated text files. It is modeled after [TMYCIN (“Tiny EMYCIN”) by Gordon S. Novak Jr.](https://www.cs.utexas.edu/~novak/tmycin/tmycin.html) of UTexas Austin which itself is modeled after [EMYCIN](https://en.wikipedia.org/wiki/Mycin). The provided contexts and rulesets in Snakes.txt and Rocks.txt are modeled after those provided in TMYCIN. JavaMYCIN has a distinct internal implementation from both of its predecessors, being written in Java.
+JavaMYCIN is a shell program and library for performing expert system consultations through the use of user-generated text files. It is modeled after [TMYCIN (“Tiny EMYCIN”) by Gordon S. Novak Jr.](https://www.cs.utexas.edu/~novak/tmycin/tmycin.html) of UTexas Austin which itself is modeled after [EMYCIN](https://en.wikipedia.org/wiki/Mycin). The provided contexts and rulesets in Snakes.txt and Rocks.txt are modeled after those provided in TMYCIN. JavaMYCIN has a distinct internal implementation from both of its predecessors, being written in Java.
 
 To compile go to the project's root folder and run `javac -d bin .\src\my\project\javamycin\*.java` in your terminal
 
@@ -16,7 +16,7 @@ The Complete Context file which includes the Context followed by a set of Rules.
 
 - Rule: A statement that if an Individual is known to have some combination of parameter values (or unknown parameters), then we should conclude that it's likely or less likely to also have some other parameter value. Rule statements can be thought of as one or more predicates AND-ed together (e.g. "IF Parameter 1 has value A AND Parameter 2 has an unknown value and ... THEN conclude strongly that Parameter F has value E")
 
-- Ruleset: A list of rules which altogether allow the expert system to make inferences about an Individual's unknown parameter values based on it's known ones.
+- Ruleset: A list of rules which altogether allow the expert system to make inferences about an Individual's unknown parameter values based on it's known ones through backchaining.
     
 An Individual file which represents an Individual within the Context known to have the user-provided parameter values.
 
